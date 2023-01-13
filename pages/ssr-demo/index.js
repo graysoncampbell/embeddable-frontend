@@ -3,6 +3,10 @@ import { clerkClient, getAuth, buildClerkProps } from "@clerk/nextjs/server";
 import { useUser } from "@clerk/nextjs";
 import React from "react";
 
+export const config = {
+  runtime: "experimental-edge",
+};
+
 const mockGetPosts = (userId) => {
   return Promise.resolve([{ title: "An Example Post", content: "Hello from Clerk + Next.js", userId }]);
 };

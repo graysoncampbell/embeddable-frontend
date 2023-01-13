@@ -3,6 +3,10 @@ import { SignedIn, SignedOut } from "@clerk/nextjs";
 import React from "react";
 import Link from "next/link";
 
+export const config = {
+  runtime: "experimental-edge",
+};
+
 const ClerkFeatures = () => (
   <Link href="/user">
     <a className={styles.cardContent}>
