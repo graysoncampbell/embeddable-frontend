@@ -1,28 +1,60 @@
-import "/styles/globals.css";
-import { ClerkProvider, SignedIn, SignedOut } from "@clerk/nextjs";
+import "../styles/globals.css";
 
-import Head from "next/head";
+import {
+  ClerkProvider,
+  SignedIn,
+  SignedOut,
+  RedirectToSignIn,
+  UserButton,
+} from "@clerk/nextjs";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
-import Script from "next/script";
-import Layout from "/components/Layout";
+//  List pages you want to be publicly accessible, or leave empty if
+//  every page requires authentication. Use this naming strategy:
+//   "/"              for pages/index.js
+//   "/foo"           for pages/foo/index.js
+//   "/foo/bar"       for pages/foo/bar.js
+//   "/foo/[...bar]"  for pages/foo/[...bar].js
+const publicPages = [];
 
-const MyApp = ({ Component, pageProps }) => {
+function MyApp({ Component, pageProps }) {
+  // Get the pathname
+  const { pathname } = useRouter();
 
+  // Check if the current route matches a public page
+  const isPublicPage = publicPages.includes(pathname);
+
+  // If the current route is listed as public, render it directly
+  // Otherwise, use Clerk to require authentication
   return (
-    <ClerkProvider {...pageProps}>
-      <Head>
-        <title>Clerk + Next.js Starter</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.css" rel="stylesheet" />
-      </Head>
-      <Script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js" />
-      <Script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js" />
-      <Layout>
-          <Component {...pageProps} />
-      </Layout>
+    <ClerkProvider>
+      {isPublicPage ? (
+        <Component {...pageProps} />
+      ) : (
+        <>
+          <SignedIn>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Link href="/">
+                <a style={{ fontSize: "125%" }}>Home</a>
+              </Link>
+              <UserButton />
+            </div>
+            <Component {...pageProps} />
+          </SignedIn>
+          <SignedOut>
+            <RedirectToSignIn />
+          </SignedOut>
+        </>
+      )}
     </ClerkProvider>
   );
-};
+}
 
 export default MyApp;
