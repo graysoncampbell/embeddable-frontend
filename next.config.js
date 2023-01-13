@@ -1,3 +1,5 @@
-module.exports = {
-    experimental: { runtime: 'edge' }
-}
+const nextConfig = { 
+    experimental: { runtime: 'experimental-edge'} 
+};
+
+export default nextConfig
