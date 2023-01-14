@@ -30,13 +30,6 @@ export default function Selector() {
 
   return (
     <div>
-      <div style={{ width: 250, float: "right" }}>
-        <Select
-          options={createOrganizationOptions(organizationList)}
-          onChange={handleOrgChange}
-          value={{ value: organization.id, label: organization.name }}
-        />
-      </div>
       <OrganizationInfo />
     </div>
   );
