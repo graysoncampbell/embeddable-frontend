@@ -36,18 +36,6 @@ function MyApp({ Component, pageProps }) {
         <>
           <SignedIn>
             <Header />
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <Link href="/">
-                <a style={{ fontSize: "125%" }}>Home</a>
-              </Link>
-              <UserButton />
-            </div>
             <Component {...pageProps} />
           </SignedIn>
           <SignedOut>

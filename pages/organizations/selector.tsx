@@ -6,7 +6,7 @@ import { useOrganization, useOrganizationList } from "@clerk/nextjs";
 import Select from "react-select";
 import { useRouter } from "next/router";
 
-export default function Switcher() {
+export default function Selector() {
   const router = useRouter();
   const { setActive, organizationList, isLoaded } = useOrganizationList();
   const { organization, ...rest } = useOrganization();
@@ -16,7 +16,7 @@ export default function Switcher() {
   }
 
   if (router.query.selected) {
-    router.replace("/organizations/switcher", undefined, { shallow: true });
+    router.replace("/organizations/selector", undefined, { shallow: true });
     setActive({ organization: router.query.selected as string });
   }
 
@@ -30,9 +30,6 @@ export default function Switcher() {
 
   return (
     <div>
-      <Head>
-        <title>Clerk Organizations Demo</title>
-      </Head>
       <div style={{ width: 250, float: "right" }}>
         <Select
           options={createOrganizationOptions(organizationList)}

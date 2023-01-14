@@ -17,7 +17,7 @@ const OrganizationList = () => {
           {organizationList.map(({ organization }) => (
             <li key={organization.id}>
               <Link
-                href={`/organizations/switcher?selected=${organization.id}`}
+                href={`/organizations/selector?selected=${organization.id}`}
               >
                 <a>{organization.name}</a>
               </Link>
