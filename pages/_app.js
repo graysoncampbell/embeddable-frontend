@@ -36,7 +36,9 @@ function MyApp({ Component, pageProps }) {
         <>
           <SignedIn>
             <Header />
-            <Component {...pageProps} />
+            <div className="mx-auto max-w-7xl">
+              <Component {...pageProps} />
+            </div>
           </SignedIn>
           <SignedOut>
             <RedirectToSignIn />
