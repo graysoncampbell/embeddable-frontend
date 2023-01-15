@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
       {isPublicPage ? (
         <Component {...pageProps} />
       ) : (
-        <>
+        <div className="bg-gray-100 h-screen">
           <SignedIn>
             <Header />
             <div className="mx-auto max-w-7xl">
@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
           <SignedOut>
             <RedirectToSignIn />
           </SignedOut>
-        </>
+        </div>
       )}
     </ClerkProvider>
   );
