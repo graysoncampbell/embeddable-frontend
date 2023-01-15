@@ -9,22 +9,31 @@ const OrganizationList = () => {
 
   return (
     <div>
-      <h2>Your organizations</h2>
-      {organizationList.length === 0 ? (
-        <div>You do not belong to any organizations yet.</div>
-      ) : (
-        <ul>
-          {organizationList.map(({ organization }) => (
-            <li key={organization.id}>
-              <Link
-                href={`/organizations/selector?selected=${organization.id}`}
-              >
-                <a>{organization.name}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      <div className="overflow-x-auto bg-white rounded-lg shadow overflow-y-auto relative my-10">
+        <div className="border-b">
+          <h2 className="text-lg font-medium px-6 py-3">Your groups</h2>
+        </div>
+        <table className="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped relative">
+          <tbody className="text-left">
+            {/* {organizationList.length === 0 ? (
+              <tr>
+                <td className="px-6 py-3">You do not belong to any organizations yet.</td>
+              </tr>
+            ) : ( */}
+              {organizationList.map(({ organization }) => (
+                  <tr>
+                    <td className="px-6 py-3">{organization.name}</td>
+                    <td className="px-6 py-3 text-right"><Link
+                    href={`/organizations/selector?selected=${organization.id}`}
+                  >
+                    <a className="py-3 underline underline-offset-2 decoration-solid text-black rounded-md">Switch</a>
+                  </Link></td>
+                  </tr>
+                ))}
+            {/* )} */}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
