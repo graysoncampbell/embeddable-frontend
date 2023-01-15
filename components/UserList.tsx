@@ -19,17 +19,23 @@ export default function MemberList() {
 
   return (
     <div>
-      <h2>Organization members</h2>
-      <ul>
-        {membershipList.map((m) => (
-          <li key={m.id}>
-            {m.publicUserData.firstName} {m.publicUserData.lastName} &lt;
-            {m.publicUserData.identifier}&gt; :: {m.role}
-            {isCurrentUserAdmin && <AdminControls membership={m} />}
-            <SelfAdminControls membership={m} />
-          </li>
-        ))}
-      </ul>
+      <div className="overflow-x-auto bg-white rounded-lg shadow overflow-y-auto relative my-10">
+        <div className="border-b">
+          <h2 className="text-lg font-medium px-6 py-3">Organization Users</h2>
+        </div>
+        <table className="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped relative">
+          <tbody className="text-left">
+            {membershipList.map((m) => (      
+              <tr>
+                <td className="px-6 py-3">{m.publicUserData.firstName} {m.publicUserData.lastName}</td>
+                <td className="px-6 py-3">{m.publicUserData.identifier}</td>
+                <td className="px-6 py-3">{m.role}</td>
+                <td className="px-6 py-3 text-right"><SelfAdminControls membership={m} />{isCurrentUserAdmin && <AdminControls membership={m} />}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

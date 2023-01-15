@@ -1,9 +1,8 @@
-import Head from "next/head";
-import MemberList from "../../components/UserList";
-import InvitationList from "../../components/InvitationList";
-import BackendTest from "../../components/BackendTest";
+import UserList from "../components/UserList";
+import InvitationList from "../components/InvitationList";
+import InviteUser from "../components/InviteUser";
+import PageTitle from "../components/PageTitle";
 import { useOrganization, useOrganizationList } from "@clerk/nextjs";
-import Select from "react-select";
 import { useRouter } from "next/router";
 
 export default function Selector() {
@@ -49,10 +48,10 @@ function OrganizationInfo() {
   const isAdmin = membership.role === "admin";
   return (
     <>
-      <h1>Organization: {currentOrganization.name}</h1>
-      <MemberList />
+      <PageTitle title="Users" />
+      {isAdmin && <InviteUser />}
       {isAdmin && <InvitationList />}
-      <BackendTest />
+      <UserList />
     </>
   );
 }
