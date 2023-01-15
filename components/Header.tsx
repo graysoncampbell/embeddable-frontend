@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header>
       <div className="min-h-full border-solid border-b-2 border-light-blue-500">
-        <nav className="bg-white-800">
+        <nav className="bg-white">
           <div className="mx-auto max-w-7xl">
             <div className="flex h-16 items-center">
               <div className="flex items-center w-full justify-between">
@@ -53,11 +53,6 @@ export default function Header() {
             </div>
           </div>
         </nav>
-      </div>
-      <div className="bg-white">
-        <div className="mx-auto max-w-7xl py-6">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-        </div>
       </div>
     </header>
   );
