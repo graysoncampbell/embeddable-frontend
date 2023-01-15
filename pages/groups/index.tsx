@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import OrganizationList from "../../components/OrganizationList";
+import GroupList from "../../components/GroupList";
 import CreateGroup from "../../components/CreateGroup";
 import PageTitle from "../../components/PageTitle";
 
@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <PageTitle title="Groups" />
       <CreateGroup />
-      <OrganizationList />
+      <GroupList />
     </div>
   );
 }
