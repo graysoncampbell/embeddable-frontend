@@ -1,4 +1,5 @@
 import Head from "next/head";
+import ViewApps from "../components/ViewApps";
 import PageTitle from "../components/PageTitle";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
         <title>Dashboard</title>
       </Head>
       <PageTitle title="Dashboard" />
+      <ViewApps />
     </div>
   );
 }
