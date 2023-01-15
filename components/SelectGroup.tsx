@@ -2,7 +2,7 @@ import { useOrganization, useOrganizationList } from "@clerk/nextjs";
 import Select from "react-select";
 import { useRouter } from "next/router";
 
-export default function SelectOrganization() {
+export default function SelectGroup() {
   const router = useRouter();
   const { setActive, organizationList, isLoaded } = useOrganizationList();
   const { organization, ...rest } = useOrganization();

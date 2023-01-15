@@ -2,7 +2,7 @@ import React from "react";
 import { navLinks } from "../utils/data";
 import Link from "next/link";
 import Image from 'next/image'
-import SelectOrganization from "../components/SelectOrganization";
+import SelectGroup from "./SelectGroup";
 import {
   ClerkProvider,
   SignedIn,
@@ -38,7 +38,7 @@ export default function Header() {
                 <div className="flex-none">
                   <div className="relative ml-3">
                     <div>
-                      <SelectOrganization />
+                      <SelectGroup />
                     </div>
                   </div>
                 </div>
