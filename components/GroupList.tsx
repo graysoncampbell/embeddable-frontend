@@ -1,7 +1,7 @@
 import { useOrganizationList } from "@clerk/nextjs";
 import Link from "next/link";
 
-const OrganizationList = () => {
+const GroupList = () => {
   const { organizationList, isLoaded } = useOrganizationList();
   if (!isLoaded) {
     return null;
@@ -38,4 +38,4 @@ const OrganizationList = () => {
   );
 };
 
-export default OrganizationList;
+export default GroupList;

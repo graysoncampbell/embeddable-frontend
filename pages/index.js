@@ -1,7 +1,5 @@
 import Head from "next/head";
-
-import OrganizationList from "../components/OrganizationList";
-import CreateOrganization from "../components/CreateOrganization";
+import PageTitle from "../components/PageTitle";
 
 export default function Home() {
   return (
@@ -9,8 +7,7 @@ export default function Home() {
       <Head>
         <title>Dashboard</title>
       </Head>
-      <OrganizationList />
-      <CreateOrganization />
+      <PageTitle title="Dashboard" />
     </div>
   );
 }

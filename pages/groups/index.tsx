@@ -1,7 +1,7 @@
 import Head from "next/head";
 
-import OrganizationList from "../../components/OrganizationList";
-import CreateOrganization from "../../components/CreateOrganization";
+import GroupList from "../../components/GroupList";
+import CreateGroup from "../../components/CreateGroup";
 import PageTitle from "../../components/PageTitle";
 
 export default function Home() {
@@ -11,8 +11,8 @@ export default function Home() {
         <title>Embeddable | Group Management</title>
       </Head>
       <PageTitle title="Groups" />
-      <CreateOrganization />
-      <OrganizationList />
+      <CreateGroup />
+      <GroupList />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { useOrganizationList } from "@clerk/nextjs";
 import { FormEventHandler, useState } from "react";
 
-export default function CreateOrganization() {
+export default function CreateGroup() {
   const { createOrganization, setActive } = useOrganizationList();
   const [organizationName, setOrganizationName] = useState("");
 
@@ -30,7 +30,7 @@ export default function CreateOrganization() {
               />
             </div>
             <div className="w-1/2 text-right rounded-md">
-              <button type="submit" className="py-3 px-6 bg-indigo-700 text-white rounded-md">Create organization</button>
+              <button type="submit" className="py-3 px-6 bg-indigo-700 text-white rounded-md">Create group</button>
             </div>
           </form>
         </div>
