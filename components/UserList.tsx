@@ -67,19 +67,18 @@ const AdminControls = ({
 
   return (
     <>
-      ::{" "}
-      <button disabled={disabled} onClick={remove}>
-        Remove member
-      </button>{" "}
       {membership.role === "admin" ? (
-        <button disabled={disabled} onClick={() => changeRole("basic_member")}>
+        <button className="py-3 px-1 underline underline-offset-2 decoration-solid text-black rounded-md" disabled={disabled} onClick={() => changeRole("basic_member")}>
           Change to member
         </button>
       ) : (
-        <button disabled={disabled} onClick={() => changeRole("admin")}>
+        <button className="py-3 px-1 underline underline-offset-2 decoration-solid text-black rounded-md" disabled={disabled} onClick={() => changeRole("admin")}>
           Change to admin
         </button>
       )}
+      <button className="py-3 px-1 underline underline-offset-2 decoration-solid text-red-600 rounded-md" disabled={disabled} onClick={remove}>
+        Remove member
+      </button>
     </>
   );
 };
@@ -123,8 +122,8 @@ const SelfAdminControls = ({
 
   return (
     <>
-      ::{" "}
-      <button disabled={disabled} onClick={leave}>
+      {" "}
+      <button className="py-3 underline underline-offset-2 decoration-solid text-red-600 rounded-md" disabled={disabled} onClick={leave}>
         Leave organization
       </button>
     </>

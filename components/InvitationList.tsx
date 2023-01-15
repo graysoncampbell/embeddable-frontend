@@ -22,7 +22,7 @@ export default function InvitationList() {
             {invitationList.map((i) => (
               <tr>
                 <td className="px-6 py-3">{i.emailAddress}</td>
-                <td className="px-6 py-3 text-right"><button onClick={() => revoke(i)}>Revoke</button></td>
+                <td className="px-6 py-3 text-right"><button className="py-3 underline underline-offset-2 decoration-solid text-red-600 rounded-md" onClick={() => revoke(i)}>Revoke invitation</button></td>
               </tr>
             ))}
           </tbody>

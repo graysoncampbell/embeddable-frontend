@@ -23,36 +23,31 @@ export default function InviteMember() {
                     <h2 className="text-lg font-medium px-6 py-3">Invite a user</h2>
                 </div>
                 <div>
-                    <form onSubmit={onSubmit}>
-                        <input
-                        type="text"
-                        placeholder="Email address"
-                        value={emailAddress}
-                        onChange={(e) => setEmailAddress(e.target.value)}
-                        />
-                        <label>
-                        <input
-                            type="radio"
-                            checked={role === "admin"}
-                            onChange={() => {
-                            setRole("admin");
-                            }}
-                        />{" "}
-                        Admin
-                        </label>
-                        <label>
-                        <input
-                            type="radio"
-                            checked={role === "basic_member"}
-                            onChange={() => {
-                            setRole("basic_member");
-                            }}
-                        />{" "}
-                        Member
-                        </label>{" "}
-                        <button type="submit" disabled={disabled}>
-                        Invite
-                        </button>
+                    <form onSubmit={onSubmit} className="px-6 py-3 flex gap-4">
+                        <div className="w-1/2">
+                            <input
+                            type="text"
+                            placeholder="Email address"
+                            value={emailAddress}
+                            onChange={(e) => setEmailAddress(e.target.value)}
+                            className="px-6 py-3 w-full rounded-md"
+                            />
+                        </div>
+                        <div className="w-1/4">
+                            <select className="px-4 py-3 w-full rounded-md" 
+                                onChange={() => {
+                                setRole("basic_member");
+                                }}>
+                                <option value="basic_member">Set permission level </option>
+                                <option value="basic_member">Member</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                        <div className="w-1/4 text-right rounded-md">
+                            <button type="submit" disabled={disabled} className="py-3 px-6 bg-indigo-700 text-white rounded-md">
+                            Invite
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
