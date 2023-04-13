@@ -6,13 +6,5 @@ export const navLinks = [
     { 
         name: "Apps", 
         path: "/apps"
-    }, 
-    { 
-        name: "Users", 
-        path: "/users" 
-    },
-    { 
-        name: "Groups", 
-        path: "/groups" 
     }
 ];

@@ -8,7 +8,6 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import Header from "../components/Header";
 
 //  List pages you want to be publicly accessible, or leave empty if
@@ -18,6 +17,8 @@ import Header from "../components/Header";
 //   "/foo/bar"       for pages/foo/bar.js
 //   "/foo/[...bar]"  for pages/foo/[...bar].js
 const publicPages = [];
+
+const clerk_pub_key = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
 function MyApp({ Component, pageProps }) {
   // Get the pathname
@@ -29,7 +30,13 @@ function MyApp({ Component, pageProps }) {
   // If the current route is listed as public, render it directly
   // Otherwise, use Clerk to require authentication
   return (
-    <ClerkProvider>
+    <ClerkProvider publishableKey={clerk_pub_key} appearance={{
+      elements: {
+        formButtonPrimary: 'bg-indigo-700 hover:bg-indigo-600 text-sm normal-case',
+        headerTitle: 'text-2xl font-bold',
+        formButtonReset: 'bg-white hover:bg-indigo-700 hover:text-white text-indigo-700 text-sm normal-case'
+      }
+    }}>
       {isPublicPage ? (
         <Component {...pageProps} />
       ) : (
