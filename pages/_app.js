@@ -9,6 +9,7 @@ import {
 } from "@clerk/nextjs";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
+import { appWithTranslation } from 'next-i18next'
 
 //  List pages you want to be publicly accessible, or leave empty if
 //  every page requires authentication. Use this naming strategy:
@@ -56,4 +57,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

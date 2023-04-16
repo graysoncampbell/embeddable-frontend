@@ -1,0 +1,19 @@
+{
+  "apps": [
+    {
+      "titleText": "Instagram Feed",
+      "videoLink": "Then check out <1>this blog post</1>.",
+      "bodyText": "https://locize.com/blog/next-13-app-dir-i18n/"
+    },
+    {
+      "titleText": "Comments",
+      "videoLink": "Then check out <1>this blog post</1>.",
+      "bodyText": "https://locize.com/blog/next-13-app-dir-i18n/"
+    },
+    {
+      "titleText": "Graphs",
+      "videoLink": "Then check out <1>this blog post</1>.",
+      "bodyText": "https://locize.com/blog/next-13-app-dir-i18n/"
+    }
+  ]
+}
