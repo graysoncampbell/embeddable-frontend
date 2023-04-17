@@ -2,18 +2,24 @@
   "apps": [
     {
       "titleText": "Instagram Feed",
-      "videoLink": "Then check out <1>this blog post</1>.",
-      "bodyText": "https://locize.com/blog/next-13-app-dir-i18n/"
+      "videoLink": "https://www.youtube.com/watch?v=ysz5S6PUM-U",
+      "bodyText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sodales nisi sit amet fermentum accumsan. Nullam tincidunt ligula in augue sollicitudin euismod. Nullam purus enim, varius eu rhoncus in, interdum at nulla. Etiam ac sem urna. Vestibulum eu ligula est. Integer sed ullamcorper dolor. Suspendisse varius suscipit imperdiet. Curabitur accumsan gravida laoreet. Aliquam vitae vehicula leo. Donec non dui ac velit consectetur aliquet id in felis. Duis laoreet enim sed nisi venenatis, eget suscipit nisi consequat. Praesent diam ex, cursus quis urna nec, malesuada tempor purus.",
+      "buttonText": "Create Instagram Feed",
+      "buttonLink": "/create/instagram-feed"
     },
     {
       "titleText": "Comments",
-      "videoLink": "Then check out <1>this blog post</1>.",
-      "bodyText": "https://locize.com/blog/next-13-app-dir-i18n/"
+      "videoLink": "https://www.youtube.com/watch?v=ScMzIvxBSi4",
+      "bodyText": "Duis bibendum leo bibendum, aliquam ex sed, gravida enim. Nunc nec lacus facilisis, tempor diam sed, fermentum elit. Curabitur ut sapien justo. Curabitur vitae mattis neque. Nam vitae sapien et turpis laoreet imperdiet. Donec sapien lectus, condimentum sit amet tincidunt at, viverra commodo sem. Nam pharetra nunc leo, non dictum augue vehicula luctus. In id tellus ut est facilisis porttitor.",
+      "buttonText": "Create Comments",
+      "buttonLink": "/create/comments"
     },
     {
       "titleText": "Graphs",
-      "videoLink": "Then check out <1>this blog post</1>.",
-      "bodyText": "https://locize.com/blog/next-13-app-dir-i18n/"
+      "videoLink": "https://www.youtube.com/watch?v=ysz5S6PUM-U",
+      "bodyText": "Donec vitae interdum felis, non dictum tellus. Donec laoreet nulla nec elit maximus, id convallis dui porttitor. Vestibulum lectus orci, placerat sed tristique vel, vestibulum et magna. Aliquam nisl lectus, vehicula eget blandit vel, ultricies in orci. Morbi sed consequat ex.",
+      "buttonText": "Create Graphs",
+      "buttonLink": "/create/graphs"
     }
   ]
 }

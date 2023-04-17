@@ -9,6 +9,8 @@ import { useTranslation } from 'next-i18next'
 const Home = ({ createApps, appCatalog }) => {
 
   const { t } = useTranslation('createApps', 'appCatalog')
+  const appCatalogObject = t('apps', { returnObjects: true })
+  const appCatalogArray = Object.entries(appCatalogObject)
 
   const { organizationList, isLoaded, setActive } = useOrganizationList();
 
