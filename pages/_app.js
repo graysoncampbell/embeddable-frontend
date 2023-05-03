@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }) {
       {isPublicPage ? (
         <Component {...pageProps} />
       ) : (
-        <div className="bg-gray-100 h-screen">
+        <div className="bg-gray-100 min-h-screen pb-10">
           <SignedIn>
             <Header />
             <div className="mx-auto max-w-7xl">
