@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../embeddable-script-service"
+		},
+		{
+			"path": "../embeddable-website"
+		}
+	]
+}
